@@ -1,4 +1,4 @@
-<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ManageOrders.aspx.vb" Inherits="bookstores.ManageOrders" %>
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ManageOrders.aspx.vb" Inherits="bookstoresManagement.ManageOrders" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
