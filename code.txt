@@ -1,0 +1,36 @@
+<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="ManageOrders.aspx.vb" Inherits="bookstores.ManageOrders" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Manage Orders - Booksy</title>
+    <style>
+        body { font-family: Arial; background-color: #f9f9f9; }
+        .container { width: 90%; margin: 40px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        h2 { color: #c19a6b; text-align: center; }
+        .grid { width: 100%; margin-top: 20px; }
+        .grid th, .grid td { padding: 10px; text-align: left; border-bottom: 1px solid #ccc; }
+        .grid th { background-color: #c19a6b; color: white; }
+        .grid tr:hover { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <h2>Manage Orders</h2>
+            <asp:GridView ID="gvOrders" runat="server" AutoGenerateColumns="False" CssClass="grid">
+                <Columns>
+                    <asp:BoundField DataField="OrderID" HeaderText="Order ID" />
+                    <asp:BoundField DataField="UserID" HeaderText="User ID" />
+                    <asp:BoundField DataField="TotalAmount" HeaderText="Total Amount" DataFormatString="₹{0:N2}" />
+                    <asp:BoundField DataField="Address" HeaderText="Address" />
+                    <asp:BoundField DataField="City" HeaderText="City" />
+                    <asp:BoundField DataField="State" HeaderText="State" />
+                    <asp:BoundField DataField="Pincode" HeaderText="Pincode" />
+                    <asp:BoundField DataField="CreatedAt" HeaderText="Order Date" DataFormatString="{0:dd-MM-yyyy HH:mm}" />
+                </Columns>
+            </asp:GridView>
+        </div>
+    </form>
+</body>
+</html>
